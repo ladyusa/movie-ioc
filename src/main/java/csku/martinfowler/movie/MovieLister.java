@@ -7,8 +7,8 @@ public class MovieLister {
 
 	private MovieFinder finder;
 
-	public MovieLister() {
-		this.finder = new CSVMovieFinder();
+	public MovieLister(MovieFinder finder) {
+		this.finder = finder;
 	}
 
 	public Movie[] moviesDirectedBy(String arg) {

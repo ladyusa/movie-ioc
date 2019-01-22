@@ -11,8 +11,8 @@ public class CSVMovieFinder implements MovieFinder {
 
 	private String filename;
 
-    public CSVMovieFinder() {
-        this.filename = "movies1.txt";
+    public CSVMovieFinder(String filename) {
+        this.filename = filename;
     }
 
 	@Override
