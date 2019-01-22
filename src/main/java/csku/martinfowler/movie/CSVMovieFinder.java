@@ -1,5 +1,7 @@
 package csku.martinfowler.movie;
 
+import org.springframework.stereotype.Component;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -7,11 +9,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class CSVMovieFinder implements MovieFinder {
 
 	private String filename;
 
-    public CSVMovieFinder(String filename) {
+	public CSVMovieFinder() {
+		this.filename = "movies1.txt";
+	}
+
+	public CSVMovieFinder(String filename) {
         this.filename = filename;
     }
 

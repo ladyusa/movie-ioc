@@ -1,12 +1,17 @@
 package csku.martinfowler.movie;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.Iterator;
 import java.util.List;
 
+@Component
 public class MovieLister {
 
 	private MovieFinder finder;
 
+	@Autowired
 	public MovieLister(MovieFinder finder) {
 		this.finder = finder;
 	}
